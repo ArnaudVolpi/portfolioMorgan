@@ -1,0 +1,158 @@
+.site-content {
+    max-width: 1100px;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .site-content__headline {
+    font-weight: 200;
+    color: #ffffff;
+    font-size: calc(2vw + 10px);
+  }
+  
+  .menu-icon {
+    height: 30px;
+    width: 30px;
+    position: fixed;
+    z-index: 2;
+    left: 50px;
+    top: 30px;
+    cursor: pointer;
+  }
+  .menu-icon__line {
+    height: 2px;
+    width: 30px;
+    display: block;
+    background-color: #ffffff;
+    margin-bottom: 4px;
+    transition: background-color .5s ease, -webkit-transform .2s ease;
+    transition: transform .2s ease, background-color .5s ease;
+    transition: transform .2s ease, background-color .5s ease, -webkit-transform .2s ease;
+  }
+  .menu-icon__line-left {
+    width: 15px;
+  }
+  .menu-icon__line-right {
+    width: 15px;
+    float: right;
+  }
+  
+  .nav2 {
+    position: fixed;
+    z-index: 1;
+  }
+  .nav2:before, .nav2:after {
+    content: "";
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(234, 234, 234, 0.2);
+    z-index: -1;
+    transition: -webkit-transform cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+    transition: transform cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+    transition: transform cubic-bezier(0.77, 0, 0.175, 1) 0.8s, -webkit-transform cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+    -webkit-transform: translateX(0%) translateY(-100%);
+            transform: translateX(0%) translateY(-100%);
+  }
+  .nav2:after {
+    background: rgb(255, 255, 255);
+    transition-delay: 0s;
+  }
+  .nav2:before {
+    transition-delay: .1s;
+  }
+  .nav2__content {
+    position: fixed;
+    top: 50%;
+    -webkit-transform: translate(0%, -50%);
+            transform: translate(0%, -50%);
+    width: 100%;
+    text-align: center;
+    font-size: calc(2vw + 10px);
+    font-weight: 200;
+    cursor: pointer;
+  }
+  .nav2__list-item {
+    position: relative;
+    display: inline-block;
+    transition-delay: 0.8s;
+    opacity: 0;
+    -webkit-transform: translate(0%, 100%);
+            transform: translate(0%, 100%);
+    transition: opacity .2s ease, -webkit-transform .3s ease;
+    transition: opacity .2s ease, transform .3s ease;
+    transition: opacity .2s ease, transform .3s ease, -webkit-transform .3s ease;
+    margin-right: 25px;
+  }
+  
+    
+  
+  .nav2__list-item:before {
+    content: "";
+    position: absolute;
+    background: #000000;
+    width: 20px;
+    height: 1px;
+    top: 100%;
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+    transition: all .3s ease;
+    z-index: -1;
+  }
+  .nav2__list-item:hover:before {
+    width: 100%;
+  }
+  
+  body.nav2-active .menu-icon__line {
+    background-color: #000!important;
+    -webkit-transform: translateX(0px) rotate(-45deg);
+            transform: translateX(0px) rotate(-45deg);
+  }
+  body.nav2-active .menu-icon__line-left {
+    -webkit-transform: translateX(1px) rotate(45deg);
+            transform: translateX(1px) rotate(45deg);
+  }
+  body.nav2-active .menu-icon__line-right {
+    -webkit-transform: translateX(-2px) rotate(45deg);
+            transform: translateX(-2px) rotate(45deg);
+  }
+  body.nav2-active .nav2 {
+    visibility: visible;
+  }
+  body.nav2-active .nav2:before, body.nav2-active .nav2:after {
+    -webkit-transform: translateX(0%) translateY(0%);
+            transform: translateX(0%) translateY(0%);
+  }
+  body.nav2-active .nav2:after {
+    transition-delay: .1s;
+  }
+  body.nav2-active .nav2:before {
+    transition-delay: 0s;
+  }
+  body.nav2-active .nav2__list-item {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    transition: opacity .3s ease, color .3s ease, -webkit-transform .3s ease;
+    transition: opacity .3s ease, transform .3s ease, color .3s ease;
+    transition: opacity .3s ease, transform .3s ease, color .3s ease, -webkit-transform .3s ease;
+  }
+  body.nav2-active .nav2__list-item:nth-child(0) {
+    transition-delay: 0.5s;
+  }
+  body.nav2-active .nav2__list-item:nth-child(1) {
+    transition-delay: 0.6s;
+  }
+  body.nav2-active .nav2__list-item:nth-child(2) {
+    transition-delay: 0.7s;
+  }
+  body.nav2-active .nav2__list-item:nth-child(3) {
+    transition-delay: 0.8s;
+  }
+  body.nav2-active .nav2__list-item:nth-child(4) {
+    transition-delay: 0.9s;
+  }
+  
