@@ -1,7 +1,7 @@
 body{
     font-family: "aileron", Helvetica, Arial, sans-serif!important;
     overflow-x: hidden;
-    background-color: #222;
+    background-color: #000000;
 }
 #homeVideo {
     position: fixed;
@@ -12,25 +12,44 @@ body{
     
 }
 
-.titre {
-
-    position : absolute;
-    color : white;
-    font-size: 90px;
-    display : flex;
-    width : 100%;
-    height : 90%;
+/*dev par arnaud */
+/* section{
+    width: 100%;
+}
+section div{
+    margin-top:9vh;
+} */
+section#home div{
+    margin-top: 0vh;
+}
+.home{
+    width: 100%;
+    height: 100vh;
+    display: flex;
     justify-content: center;
     align-items: center;
+    
+}
+
+.titre {
+    position: absolute;
+    color: white;
+    font-size: 90px;
+    text-align: center;
     font-style: normal;
     font-weight: normal;
 
     }
 
-  
+a{
+    text-decoration: none;
+    color : black;
+}
+
 
 
 @font-face {
 	font-family: "aileron";
 	src: url('../font/aileron.otf');
 }
+

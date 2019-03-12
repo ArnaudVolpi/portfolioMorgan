@@ -15,12 +15,16 @@ var app = function () {
 
     var applyListeners = function applyListeners() {
         menu.addEventListener('click', function () { return toggleClass(body, 'nav2-active'); });
+        for (i = 0; i < menuItems.length; i++) {
+            menuItems[i].addEventListener('click', function () { return toggleClass(body, 'nav2-active'); });
+        }
+
     };
+
 
     var toggleClass = function toggleClass(element, stringClass) {
         if (element.classList.contains(stringClass))
             element.classList.remove(stringClass); else
-
             element.classList.add(stringClass);
     };
 

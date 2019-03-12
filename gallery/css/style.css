@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #24252a;
+}
+
+#galleryGrid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    /* grid-template-rows: repeat(80, 5vw); */
+    grid-auto-rows: 5vw;
+    grid-gap: 3px;
+  }
+
+  #galleryGrid > div > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.resizePaysage{
+  object-fit: cover;
+  object-position: 0 0;
+}
+
+#galleryGrid > div.normal{
+    grid-column: span 2;
+    grid-row: span 4;
+    position: relative;
+  }
+  #galleryGrid > div.portrait{
+    grid-column: span 2;
+    grid-row: span 8;
+    position: relative;
+  }
+  #galleryGrid > div.paysage{
+    grid-column: span 4;
+    grid-row: span 4;
+    position: relative;
+  }
+
+  #galleryGrid > div > img {
+    width: 100%;
+    min-height: 100%;
+    transition: all ease 1s;
+  }
+
+
+  /* Overlay */
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+}
+.overlay:hover {
+	opacity: 1;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+}
+/*Overlay Background*/
+.panel-vingette {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	opacity: 0.5;
+}
+.panel-gradient {
+	position: absolute;
+	width: 100%;
+	height: 65%;
+	bottom: 0;
+	opacity: 0.65;
+	z-index: 1;
+}
+
+/*Overlay Text*/
+.panel-text {
+	position: absolute;
+	width: 80%;
+	height: 60px;
+	margin: 0 auto;
+	left: 25px;
+	bottom: 0;
+	z-index: 2;
+}
+/*titre*/
+.panel-title {
+	font-size: 1em;
+	font-weight: 300;
+	letter-spacing: 0;
+	color: #fff;
+}
+.panel-tags {
+    padding-top: 2px;
+    display: flex;
+    align-items: center;
+}
+/*Icon description*/
+.tag-icon{
+    margin-right: 10px;
+    color: #fff;
+}
+/*description*/
+.tags-list {
+	font-size: 0.55em;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	color: #fff;
+}
+
+
+
+
+
+.background{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 0.9;
+}
+
+
+[id^="lightbox-"] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    opacity: 0;
+    transition: opacity 450ms ease-in-out;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 100;
+    
+  }
+  [id^="lightbox-"]:target {
+    opacity: 1;
+    pointer-events: inherit;
+  }
+  [id^="lightbox-"]:target img {
+    filter: blur(0);
+  }
+  [id^="lightbox-"] .content {
+    max-height: 90%;
+    position: relative;
+    color: #fff;
+   
+  }
+  [id^="lightbox-"] .content > * {
+    transition: all 450ms ease-in-out;
+    display: block;
+  }
+  [id^="lightbox-"] img {
+    max-height: 90vh;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+   /*  filter: blur(50px); */
+  }
+
+
+
+
+/*Mobile*/
+  @media (max-width: 768px) {
+    #galleryGrid {
+      grid-auto-flow: row dense;
+    }
+
+    #galleryGrid > div.normal{
+      grid-column: span 4;
+      grid-row: span 8;
+      position: relative;
+    }
+    #galleryGrid > div.portrait{
+      grid-column: span 4;
+      grid-row: span 16;
+      position: relative;
+    }
+    #galleryGrid > div.paysage{
+      grid-column: span 8;
+      grid-row: span 8;
+      position: relative;
+    }
+    /* .overlay> div, */ .panel-text{
+      visibility: hidden;
+    }
+
+    [id^="lightbox-"] {
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+  }
+
+

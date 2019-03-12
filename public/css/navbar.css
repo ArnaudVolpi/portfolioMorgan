@@ -1,3 +1,12 @@
+
+header{
+  position: absolute;
+  top: 0px;
+  height: 80px; 
+  width: 100%;
+}
+
+
 .site-content {
     max-width: 1100px;
     height: 100vh;
@@ -77,6 +86,7 @@
   }
   .nav2__list-item {
     position: relative;
+
     display: inline-block;
     transition-delay: 0.8s;
     opacity: 0;

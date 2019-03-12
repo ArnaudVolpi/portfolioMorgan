@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/filter.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- Filter -->
+    <div class="filterContainer">
+        <button class="bttn-filter all">Tout</button>
+        <button class="bttn-filter urbex">Urbex</button>
+        <button class="bttn-filter paysage">Paysage</button>
+        <button class="bttn-filter portrait">Portrait</button>
+        <button class="bttn-filter sport">Sport</button>
+    </div>
+
+
+    <!-- Gallery -->
+    <div id="galleryGrid">
+        <div class="portrait photo">
+            <img class="panel-img portrait" src="https://i.imgur.com/g0068q6.jpg" alt="" />
+            <div class="overlay">
+                <a href="#lightbox-1">
+                    <div class="panel-text">
+                        <div class="panel-title">Portrait</div>
+                        <div class="panel-tags">
+                            <span class="tag-icon"><i class="fas fa-compass"></i></span>
+                            <span class="tags-list">Landscapes, Waves, Beach</span>
+                        </div>
+                    </div>
+                    <img class="panel-gradient"
+                        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/base-gradient.png" alt="" />
+                    <img class="panel-vingette"
+                        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/darken-gradient.png" alt="" />
+                </a>
+            </div>
+        </div>
+
+
+
+        <div class="paysage photo">
+            <img class="panel-img resizePaysage sport paysage" src="https://i.imgur.com/Rm2mvsE.jpg" alt="" />
+            <div class="overlay">
+                <a href="#lightbox-2">
+                    <div class="panel-text">
+                        <div class="panel-title">Paysage</div>
+                        <div class="panel-tags">
+                            <span class="tag-icon"><i class="fas fa-compass"></i></span>
+                            <span class="tags-list">Landscapes, Waves, Beach</span>
+                        </div>
+                    </div>
+                    <img class="panel-gradient"
+                        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/base-gradient.png" alt="" />
+                    <img class="panel-vingette"
+                        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/darken-gradient.png" alt="" />
+                </a>
+            </div>
+        </div>
+
+
+
+        <div class="portrait photo">
+            <img class="panel-img portrait"
+                src="https://images.pexels.com/photos/1936936/pexels-photo-1936936.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                alt="" />
+            <div class="overlay">
+                <a href="#lightbox-3">
+                    <div class="panel-text">
+                        <div class="panel-title">Portrait</div>
+                        <div class="panel-tags">
+                            <span class="tag-icon"><i class="fas fa-compass"></i></span>
+                            <span class="tags-list">Landscapes, Waves, Beach</span>
+                        </div>
+                    </div>
+                    <img class="panel-gradient"
+                        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/base-gradient.png" alt="" />
+                    <img class="panel-vingette"
+                        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/darken-gradient.png" alt="" />
+                </a>
+            </div>
+        </div>
+        <div class="normal photo">
+            <img class="panel-img" src="https://i.imgur.com/oYjkIkY.jpg" alt="" />
+            <div class="overlay">
+                <a href="#lightbox-4">
+                    <div class="panel-text">
+                        <div class="panel-title">Normal</div>
+                        <div class="panel-tags">
+                            <span class="tag-icon"><i class="fas fa-compass"></i></span>
+                            <span class="tags-list">Landscapes, Waves, Beach</span>
+                        </div>
+                    </div>
+                    <img class="panel-gradient"
+                        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/base-gradient.png" alt="" />
+                    <img class="panel-vingette"
+                        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/darken-gradient.png" alt="" />
+                </a>
+            </div>
+        </div>
+
+
+        <div class="normal photo">
+            <img class="panel-img" src="https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260
+            " alt="" />
+            <div class="overlay">
+                <a href="#lightbox-5">
+                    <div class="panel-text">
+                        <div class="panel-title">Normal</div>
+                        <div class="panel-tags">
+                            <span class="tag-icon"><i class="fas fa-compass"></i></span>
+                            <span class="tags-list">Landscapes, Waves, Beach</span>
+                        </div>
+                    </div>
+                    <img class="panel-gradient"
+                        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/base-gradient.png" alt="" />
+                    <img class="panel-vingette"
+                        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/darken-gradient.png" alt="" />
+                </a>
+            </div>
+        </div>
+
+
+        <!-- 2nd row -->
+
+        <div class="normal photo">
+            <img class="panel-img" src="https://i.imgur.com/oYjkIkY.jpg" alt="" />
+            <div class="overlay">
+                <a href="#lightbox-4">
+                    <div class="panel-text">
+                        <div class="panel-title">Normal</div>
+                        <div class="panel-tags">
+                            <span class="tag-icon"><i class="fas fa-compass"></i></span>
+                            <span class="tags-list">Landscapes, Waves, Beach</span>
+                        </div>
+                    </div>
+                    <img class="panel-gradient"
+                        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/base-gradient.png" alt="" />
+                    <img class="panel-vingette"
+                        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/darken-gradient.png" alt="" />
+                </a>
+            </div>
+        </div>
+        <div class="portrait photo">
+            <img class="panel-img portrait"
+                src="https://images.pexels.com/photos/1936936/pexels-photo-1936936.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                alt="" />
+            <div class="overlay">
+                <a href="#lightbox-3">
+                    <div class="panel-text">
+                        <div class="panel-title">Portrait</div>
+                        <div class="panel-tags">
+                            <span class="tag-icon"><i class="fas fa-compass"></i></span>
+                            <span class="tags-list">Landscapes, Waves, Beach</span>
+                        </div>
+                    </div>
+                    <img class="panel-gradient"
+                        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/base-gradient.png" alt="" />
+                    <img class="panel-vingette"
+                        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/darken-gradient.png" alt="" />
+                </a>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="portrait photo">
+            <img class="panel-img portrait" src="https://i.imgur.com/g0068q6.jpg" alt="" />
+            <div class="overlay">
+                <a href="#lightbox-1">
+                    <div class="panel-text">
+                        <div class="panel-title">Portrait</div>
+                        <div class="panel-tags">
+                            <span class="tag-icon"><i class="fas fa-compass"></i></span>
+                            <span class="tags-list">Landscapes, Waves, Beach</span>
+                        </div>
+                    </div>
+                    <img class="panel-gradient"
+                        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/base-gradient.png" alt="" />
+                    <img class="panel-vingette"
+                        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/darken-gradient.png" alt="" />
+                </a>
+            </div>
+        </div>
+        <div class="normal photo">
+            <img class="panel-img" src="https://i.imgur.com/oYjkIkY.jpg" alt="" />
+            <div class="overlay">
+                <a href="#lightbox-4">
+                    <div class="panel-text">
+                        <div class="panel-title">Normal</div>
+                        <div class="panel-tags">
+                            <span class="tag-icon"><i class="fas fa-compass"></i></span>
+                            <span class="tags-list">Landscapes, Waves, Beach</span>
+                        </div>
+                    </div>
+                    <img class="panel-gradient"
+                        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/base-gradient.png" alt="" />
+                    <img class="panel-vingette"
+                        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/darken-gradient.png" alt="" />
+                </a>
+            </div>
+        </div>
+
+
+        <div class="normal photo">
+            <img class="panel-img" src="https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260
+                " alt="" />
+            <div class="overlay">
+                <a href="#lightbox-5">
+                    <div class="panel-text">
+                        <div class="panel-title">Normal</div>
+                        <div class="panel-tags">
+                            <span class="tag-icon"><i class="fas fa-compass"></i></span>
+                            <span class="tags-list">Landscapes, Waves, Beach</span>
+                        </div>
+                    </div>
+                    <img class="panel-gradient"
+                        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/base-gradient.png" alt="" />
+                    <img class="panel-vingette"
+                        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/darken-gradient.png" alt="" />
+                </a>
+            </div>
+        </div>
+
+        <div class="normal photo">
+            <img class="panel-img" src="https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260
+                " alt="" />
+            <div class="overlay">
+                <a href="#lightbox-5">
+                    <div class="panel-text">
+                        <div class="panel-title">Normal</div>
+                        <div class="panel-tags">
+                            <span class="tag-icon"><i class="fas fa-compass"></i></span>
+                            <span class="tags-list">Landscapes, Waves, Beach</span>
+                        </div>
+                    </div>
+                    <img class="panel-gradient"
+                        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/base-gradient.png" alt="" />
+                    <img class="panel-vingette"
+                        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/darken-gradient.png" alt="" />
+                </a>
+            </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- 
+
+        position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    /* filter: blur(10px); */
+    /* z-index: 9999; */
+    opacity: 0.8;
+ -->
+
+
+
+
+
+
+
+    <a href="#galleryGrid" class="lightbox" id="lightbox-1">
+        <div class="background"></div>
+        <div class="content">
+            <img src="https://i.imgur.com/g0068q6.jpg" />
+            <div class="overlay">
+                <div class="panel-text">
+                    <div class="panel-title">Portrait</div>
+                    <div class="panel-tags">
+                        <span class="tag-icon"><i class="fas fa-compass"></i></span>
+                        <span class="tags-list">Landscapes, Waves, Beach</span>
+                    </div>
+                </div>
+                <img class="panel-gradient" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/base-gradient.png"
+                    alt="" />
+                <img class="panel-vingette"
+                    src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/darken-gradient.png" alt="" />
+            </div>
+        </div>
+    </a>
+
+    <a href="#galleryGrid" class="lightbox" id="lightbox-2">
+        <div class="background"></div>
+        <div class="content">
+            <img src="https://i.imgur.com/Rm2mvsE.jpg">
+            <div class="overlay">
+                <div class="panel-text">
+                    <div class="panel-title">Portrait</div>
+                    <div class="panel-tags">
+                        <span class="tag-icon"><i class="fas fa-compass"></i></span>
+                        <span class="tags-list">Landscapes, Waves, Beach</span>
+                    </div>
+                </div>
+                <img class="panel-gradient" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/base-gradient.png"
+                    alt="" />
+                <img class="panel-vingette"
+                    src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/darken-gradient.png" alt="" />
+            </div>
+        </div>
+    </a>
+
+    <a href="#galleryGrid" class="lightbox" id="lightbox-3">
+        <div class="background"></div>
+        <div class="content">
+            <img src="https://images.pexels.com/photos/1936936/pexels-photo-1936936.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                alt="" />
+            <div class="overlay">
+                <div class="panel-text">
+                    <div class="panel-title">Portrait</div>
+                    <div class="panel-tags">
+                        <span class="tag-icon"><i class="fas fa-compass"></i></span>
+                        <span class="tags-list">Landscapes, Waves, Beach</span>
+                    </div>
+                </div>
+                <img class="panel-gradient" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/base-gradient.png"
+                    alt="" />
+                <img class="panel-vingette"
+                    src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/darken-gradient.png" alt="" />
+            </div>
+        </div>
+    </a>
+
+
+    <a href="#galleryGrid" class="lightbox" id="lightbox-4">
+        <div class="background"></div>
+        <div class="content">
+            <img src="https://i.imgur.com/oYjkIkY.jpg" alt="" />
+            <div class="overlay">
+                <div class="panel-text">
+                    <div class="panel-title">Portrait</div>
+                    <div class="panel-tags">
+                        <span class="tag-icon"><i class="fas fa-compass"></i></span>
+                        <span class="tags-list">Landscapes, Waves, Beach</span>
+                    </div>
+                </div>
+                <img class="panel-gradient" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/base-gradient.png"
+                    alt="" />
+                <img class="panel-vingette"
+                    src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/darken-gradient.png" alt="" />
+            </div>
+        </div>
+    </a>
+
+
+    <a href="#galleryGrid" class="lightbox" id="lightbox-5">
+        <div class="background"></div>
+        <div class="content">
+            <img src="https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260
+            " alt="" />
+            <div class="overlay">
+                <div class="panel-text">
+                    <div class="panel-title">Portrait</div>
+                    <div class="panel-tags">
+                        <span class="tag-icon"><i class="fas fa-compass"></i></span>
+                        <span class="tags-list">Landscapes, Waves, Beach</span>
+                    </div>
+                </div>
+                <img class="panel-gradient" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/base-gradient.png"
+                    alt="" />
+                <img class="panel-vingette"
+                    src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/darken-gradient.png" alt="" />
+            </div>
+        </div>
+    </a>
+
+
+
+
+
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
+        integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
+        crossorigin="anonymous"></script>
+    <script src="js/filter.js"></script>
+</body>
+
+</html>

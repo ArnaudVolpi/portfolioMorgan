@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+.filterContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100px;
+}
+/*Mobile*/
+@media (max-width: 768px) {
+    .filterContainer{
+        flex-wrap: wrap;
+    }
+}
+
+/* Btn Filter*/
+button.bttn-filter {
+    color: #efefef;
+    -webkit-transition: 0.3s all ease;
+    margin: 5px 10px;
+    height: 43px;
+    letter-spacing: 2px;
+    max-width: 8vw;
+    min-width: 100px;
+    padding: 8px 0px;
+    border: 1px solid#efefef;
+    position: relative;
+    z-index: 2;
+    border-radius: 25px;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+button.bttn-filter:hover {
+    color:#24252a;
+}
+button.bttn-filter:focus {
+    color:#24252a;
+}
+.bttn-filter:before {
+    -webkit-transition: 0.5s all ease;
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color:#efefef;
+    z-index: -1;
+    border-radius: 25px;
+}
+.bttn-filter:hover:before {
+    -webkit-transition: 0.3 all ease;
+    transition: 0.3s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+.bttn-filter:focus:before {
+    -webkit-transition: 0.3s all ease;
+    transition: 0.3s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+} 
+
+
+/*animations*/
+@-webkit-keyframes transformer {
+    from {
+        -webkit-transform:  scale(0);
+    }
+    to {
+        -webkit-transform: scale(1);
+    }
+}
+@keyframes transformer {
+    from {
+        transform:  scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+.zoomIn{
+    -webkit-animation: transformer 0.5s ease-in 0s 1;
+    animation: transformer 0.5s ease-in 0s 1;
+}
